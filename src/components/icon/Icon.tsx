@@ -1,10 +1,17 @@
 import React from 'react';
+import icons from '../../assets/images/icons.svg'
 
-export const Icon = () => {
+
+
+type IconPropsType = {
+    iconId: string
+}
+export const Icon = (props: IconPropsType) => {
     return (
-        <div>
+        <svg width="62" height="54" viewBox="0 0 62 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-        </div>
+        <use xlinkHref={`${icons}#${props.iconId}`}/>
+        </svg>
     );
 };
 
